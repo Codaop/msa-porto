@@ -1,0 +1,31 @@
+---
+import { getCollection } from "astro:content";
+
+interface Props {
+  category: "software" | "design" | "media";
+  limit?: number;
+}
+
+const { category, limit } = Astro.props;
+const projects = (await getCollection("projects", (p) => p.data.category === category))
+  .sort((a, b) => (a.data.date < b.data.date ? 1 : -1))
+  .slice(0, limit ?? 99);
+---
+{projects.map((p) => (
+  <a class="card" href={`/projects/${p.slug}/`}>
+    {p.data.images[0] && (
+      <div class="thumb">
+        <img src={p.data.images[0]} alt={`${p.data.title} screenshot`} loading="lazy" />
+      </div>
+    )}
+    <div class="body">
+      <div class="title">{p.data.title}</div>
+      <div class="meta">
+        <span>{p.data.date}</span>
+        <span class="role">{p.data.role}</span>
+        <span>{p.data.type}</span>
+      </div>
+      <p class="summary">{p.data.summary}</p>
+    </div>
+  </a>
+))}

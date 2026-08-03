@@ -1,0 +1,72 @@
+<div id="boot" class="boot hidden" aria-hidden="true">
+  <div class="boot-window">
+    <div class="boot-titlebar">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      <span>kali@portfolio: ~ — boot</span>
+    </div>
+    <pre id="boot-lines" class="boot-lines"></pre>
+    <button id="boot-skip" class="boot-skip" type="button">[ press ESC or click to skip ]</button>
+  </div>
+</div>
+
+<script>
+  const LINES: [text: string, cls: string][] = [
+    ["Booting portfolio kernel 6.6.0-kali1-amd64 ...", "dim"],
+    ["[  OK  ] Mounting /work", "ok"],
+    ["[  OK  ] Loading modules: [ui] [content] [design]", "ok"],
+    ["[  OK  ] Starting kali-theme daemon ...", "ok"],
+    ["[  OK  ] Enabling contact-channel (formspree)", "ok"],
+    ["[ WARN ] Education module: keep short, listing only", "warn"],
+    ["[ INFO ] Categories: software, design, media", "dim"],
+    ["[ INFO ] No filler projects found — good.", "dim"],
+    ["[ DONE ] Ready.", "ok"],
+    ["", ""],
+    ["kali@portfolio:~$ ", "ok"],
+  ];
+
+  const STORE_KEY = "msa-porto-boot-date";
+
+  function today(): string {
+    const d = new Date();
+    const m = String(d.getMonth() + 1).padStart(2, "0");
+    const day = String(d.getDate()).padStart(2, "0");
+    return `${d.getFullYear()}-${m}-${day}`;
+  }
+
+  const boot = document.getElementById("boot")!;
+  const linesEl = document.getElementById("boot-lines")!;
+  const skipBtn = document.getElementById("boot-skip")!;
+
+  function hide() {
+    boot.classList.add("hidden");
+    localStorage.setItem(STORE_KEY, today());
+  }
+
+  let hidden = false;
+  function start() {
+    boot.classList.remove("hidden");
+    let i = 0;
+    const timer = setInterval(() => {
+      if (hidden) return;
+      const [text, cls] = LINES[i];
+      const node = document.createElement("span");
+      node.className = cls;
+      node.textContent = text + "\n";
+      linesEl.appendChild(node);
+      i++;
+      if (i >= LINES.length) {
+        clearInterval(timer);
+        setTimeout(hide, 2900);
+      }
+    }, 160);
+  }
+
+  skipBtn.addEventListener("click", hide);
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") hide();
+  });
+
+  if (localStorage.getItem(STORE_KEY) !== today()) {
+    start();
+  }
+</script>

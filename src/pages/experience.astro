@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+
+const items = [
+  {
+    when: "2023 — 2024",
+    title: "Student Organization — Officer",
+    body: "A line about the role and what it involved. Evidence of leadership and reliability, not craft skill.",
+  },
+  {
+    when: "2024",
+    title: "Tech Festival Volunteer",
+    body: "Event volunteering — what you did, how many people it served. Shows you show up.",
+  },
+];
+---
+<Base title="experience — msa-porto" current="experience">
+  <section class="detail">
+    <a class="back" href="/">← back to portfolio</a>
+    <h1>experience</h1>
+    <p class="prose muted" style="margin: 1rem 0 2rem">
+      Organizations, extracurriculars, and volunteering — the human side
+      behind the projects. Not a skill category; this page is proof of
+      character.
+    </p>
+    <div class="timeline">
+      {items.map((i) => (
+        <div class="item">
+          <div class="when">{i.when}</div>
+          <h3>{i.title}</h3>
+          <p>{i.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,129 @@
+---
+import Base from "../layouts/Base.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+
+const categories = [
+  {
+    id: "software",
+    name: "software",
+    blurb: "Programming and computer science work, including interface design inside the projects that had it.",
+  },
+  {
+    id: "design",
+    name: "design",
+    blurb: "Graphic design and visual craft — posters, identities, and print work.",
+  },
+  {
+    id: "media",
+    name: "media",
+    blurb: "Photography and videography, done as paid freelance work.",
+  },
+];
+---
+<Base title="msa-porto — portfolio" current="home">
+  <section class="hero">
+    <p class="term">visitor@recruiter:~$ whoami</p>
+    <h1>
+      Hi, I'm <span style="color: var(--green-bright)">a developer</span> who
+      also designs &amp; shoots<span class="blink">_</span>
+    </h1>
+    <p class="lede">
+      I build software, design visuals, and shoot media — and this portfolio is
+      the evidence. Each project below links to a detail page with the work, the
+      role, and the results. Explore the categories, or skip straight to a
+      conversation.
+    </p>
+    <div class="roles">
+      <span class="tag soft">$ software</span>
+      <span class="tag">% design</span>
+      <span class="tag warn">! media</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn solid" href="#software">view projects</a>
+      <a class="btn" href="#contact">contact me</a>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="hash">#</span><h2>about</h2><span class="rule"></span>
+    </div>
+    <div class="prose">
+      <p>
+        A few sentences about who you are, what you're studying or working on
+        now, and what kind of projects you're looking for. Keep it to one short
+        paragraph — the projects do the talking.
+      </p>
+      <p class="muted">
+        $ edit me in <code>src/pages/index.astro</code>
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <div class="section-head">
+      <span class="hash">#</span><h2>education</h2><span class="rule"></span>
+    </div>
+    <div class="timeline">
+      <div class="item">
+        <div class="when">2022 — present</div>
+        <h3>Bachelor of Computer Science — University Name</h3>
+        <p>Short listing only: degree, institution, years. Nothing more.</p>
+      </div>
+    </div>
+  </section>
+
+  {categories.map((c) => (
+    <section class="section" id={c.id}>
+      <div class="section-head">
+        <span class="hash">#</span><h2>{c.name}</h2><span class="rule"></span>
+      </div>
+      <p class="prose muted" style="margin-bottom: 1.25rem">{c.blurb}</p>
+      <div class="grid">
+        <ProjectCard category={c.id} />
+      </div>
+    </section>
+  ))}
+
+  <section class="section" id="experience">
+    <div class="section-head">
+      <span class="hash">#</span><h2>experience</h2><span class="rule"></span>
+    </div>
+    <div class="prose">
+      <p class="muted">
+        Organizations, extracurriculars, and event volunteering live on their
+        own page — they show the human side, not craft skill.
+      </p>
+      <a class="btn" href="/experience">open experience page →</a>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="section-head">
+      <span class="hash">#</span><h2>contact</h2><span class="rule"></span>
+    </div>
+    <p class="prose muted" style="margin-bottom: 1.5rem">
+      Want to talk about a project, a role, or a collaboration? Drop a message —
+      it lands straight in my inbox.
+    </p>
+    <form
+      class="form"
+      action="https://formspree.io/f/your-form-id"
+      method="POST"
+    >
+      <label>
+        name
+        <input type="text" name="name" required autocomplete="name" />
+      </label>
+      <label>
+        email
+        <input type="email" name="email" required autocomplete="email" />
+      </label>
+      <label>
+        message
+        <textarea name="message" required></textarea>
+      </label>
+      <button class="btn solid" type="submit">send</button>
+    </form>
+  </section>
+</Base>

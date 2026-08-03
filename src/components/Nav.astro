@@ -1,0 +1,23 @@
+---
+const { current = "" } = Astro.props;
+const links = [
+  { href: "/#about", label: "about" },
+  { href: "/#software", label: "software" },
+  { href: "/#design", label: "design" },
+  { href: "/#media", label: "media" },
+  { href: "/experience", label: "experience" },
+  { href: "/#contact", label: "contact" },
+];
+---
+<nav class="nav" aria-label="Primary">
+  <a class="nav-brand" href="/"><span class="prompt">~/</span>msa-porto</a>
+  <div class="nav-links">
+    {links.map((l) => (
+      <a
+        href={l.href}
+        aria-current={current === l.label ? "page" : undefined}
+        ><span class="tick">✓</span> {l.label}</a
+      >
+    ))}
+  </div>
+</nav>

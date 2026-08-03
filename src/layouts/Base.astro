@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+import Nav from "../components/Nav.astro";
+import BootScreen from "../components/BootScreen.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+  current?: string;
+}
+
+const {
+  title,
+  description = "Portfolio — software, design, and media with strong evidence.",
+  current = "",
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <BootScreen />
+    <Nav current={current} />
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <span class="green">~/</span> msa-porto — built with astro, styled like kali
+      <br />© {new Date().getFullYear()} · contact via the form, or
+      <span class="green">README</span> for details
+    </footer>
+  </body>
+</html>

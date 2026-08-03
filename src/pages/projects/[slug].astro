@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+export async function getStaticPaths() {
+  const projects = await getCollection("projects");
+  return projects.map((p) => ({
+    params: { slug: p.slug },
+    props: { project: p },
+  }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+---
+<Base title={`${project.data.title} — msa-porto`} current="project">
+  <article class="detail">
+    <a class="back" href="/">← back to portfolio</a>
+    <h1>{project.data.title}</h1>
+    <div class="kvs">
+      <span class="kv"><b>category</b> {project.data.category}</span>
+      <span class="kv"><b>role</b> {project.data.role}</span>
+      <span class="kv"><b>type</b> {project.data.type}</span>
+      <span class="kv"><b>date</b> {project.data.date}</span>
+      {project.data.tech.map((t) => (
+        <span class="kv"><b>tech</b> {t}</span>
+      ))}
+    </div>
+    {(project.data.link || project.data.source) && (
+      <div class="links-row">
+        {project.data.link && (
+          <a class="btn" href={project.data.link} target="_blank" rel="noopener">live ↗</a>
+        )}
+        {project.data.source && (
+          <a class="btn" href={project.data.source} target="_blank" rel="noopener">source ↗</a>
+        )}
+      </div>
+    )}
+    <div class="gallery">
+      {project.data.images.map((img, i) => (
+        <img src={img} alt={`${project.data.title} — screenshot ${i + 1}`} loading="lazy" />
+      ))}
+    </div>
+    <div class="prose">
+      <Content />
+    </div>
+  </article>
+</Base>
