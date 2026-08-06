@@ -498,6 +498,35 @@ main {
   flex-wrap: wrap;
 }
 
+/* ---------- skills ---------- */
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.skill-group {
+  padding: 1rem 1.1rem;
+}
+
+.skill-name {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--green-bright);
+  margin-bottom: 0.7rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-tags .tag {
+  font-size: 0.72rem;
+}
+
 /* ---------- experience / about lists ---------- */
 
 .timeline {
@@ -564,6 +593,33 @@ main {
 .form textarea {
   resize: vertical;
   min-height: 8rem;
+}
+
+.form-msg {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  display: none;
+}
+
+.form-msg:not(:empty) {
+  display: block;
+}
+
+.form-success {
+  color: var(--green-bright);
+}
+
+.form-error {
+  color: var(--red);
+}
+
+.form input[aria-invalid="true"] {
+  border-color: var(--red);
+}
+
+.form button[disabled] {
+  opacity: 0.5;
+  cursor: wait;
 }
 
 /* ---------- footer ---------- */

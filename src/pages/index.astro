@@ -1,42 +1,68 @@
 ---
 import Base from "../layouts/Base.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import ContactForm from "../components/ContactForm.astro";
 
 const categories = [
   {
     id: "software",
     name: "software",
-    blurb: "Programming and computer science work, including interface design inside the projects that had it.",
+    blurb:
+      "Programming and computer science work — including the UI/UX design that lives inside each project.",
   },
   {
     id: "design",
     name: "design",
-    blurb: "Graphic design and visual craft — posters, identities, and print work.",
+    blurb: "Graphic design and visual craft — posters, identities, and event materials.",
   },
   {
     id: "media",
     name: "media",
-    blurb: "Photography and videography, done as paid freelance work.",
+    blurb:
+      "Photography and videography, done as paid freelance work.",
+  },
+];
+
+const skills = [
+  {
+    group: "design",
+    items: ["Figma", "Wireframe", "Prototyping", "Handoff", "UI/UX Design", "Graphic Design"],
+  },
+  {
+    group: "development",
+    items: ["Laravel", "ReactJS", "ASP.NET", "Next.js", "Flutter", "HTML/CSS"],
+  },
+  {
+    group: "tools & IDEs",
+    items: ["VS Code", "Antigravity IDE (Google)", "Zed"],
+  },
+  {
+    group: "creative",
+    items: ["Photography", "Videography", "Video Editing", "Event Documentation"],
+  },
+  {
+    group: "soft skills",
+    items: ["Public Speaking", "Team Collaboration", "Leadership"],
   },
 ];
 ---
-<Base title="msa-porto — portfolio" current="home">
+<Base title="Syauqy — portfolio" current="home">
   <section class="hero">
     <p class="term">visitor@recruiter:~$ whoami</p>
     <h1>
-      Hi, I'm <span style="color: var(--green-bright)">a developer</span> who
-      also designs &amp; shoots<span class="blink">_</span>
+      Hi, I'm Syauqy — a <span style="color: var(--green-bright)">UI/UX
+      designer</span> who codes<span class="blink">_</span>
     </h1>
     <p class="lede">
-      I build software, design visuals, and shoot media — and this portfolio is
-      the evidence. Each project below links to a detail page with the work, the
-      role, and the results. Explore the categories, or skip straight to a
-      conversation.
+      I bridge the gap between visual design and working software — comfortable
+      running Figma end-to-end while also shipping with Laravel, React, and
+      Next.js. This portfolio is the evidence: projects with the role, the
+      process, and the results.
     </p>
     <div class="roles">
-      <span class="tag soft">$ software</span>
-      <span class="tag">% design</span>
-      <span class="tag warn">! media</span>
+      <span class="tag soft">$ ui/ux design</span>
+      <span class="tag">% frontend dev</span>
+      <span class="tag warn">! creative media</span>
     </div>
     <div class="cta-row">
       <a class="btn solid" href="#software">view projects</a>
@@ -50,13 +76,33 @@ const categories = [
     </div>
     <div class="prose">
       <p>
-        A few sentences about who you are, what you're studying or working on
-        now, and what kind of projects you're looking for. Keep it to one short
-        paragraph — the projects do the talking.
+        I'm a UI/UX designer who codes. At PENS — Politeknik Elektronika
+        Negeri Surabaya — I've worked across product design, event
+        documentation, and web development, often at the same time. I'm drawn
+        to work where design decisions connect directly to what gets built.
       </p>
       <p class="muted">
-        $ edit me in <code>src/pages/index.astro</code>
+        Looking for roles and collaborations where the design and the code are
+        part of one conversation.
       </p>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="hash">#</span><h2>skills</h2><span class="rule"></span>
+    </div>
+    <div class="skill-grid">
+      {skills.map((s) => (
+        <div class="panel skill-group">
+          <h3 class="skill-name">{s.group}</h3>
+          <div class="skill-tags">
+            {s.items.map((i) => (
+              <span class="tag">{i}</span>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 
@@ -66,9 +112,22 @@ const categories = [
     </div>
     <div class="timeline">
       <div class="item">
-        <div class="when">2022 — present</div>
-        <h3>Bachelor of Computer Science — University Name</h3>
-        <p>Short listing only: degree, institution, years. Nothing more.</p>
+        <div class="when">2024 — present</div>
+        <h3>S.Tr. Informatics Engineering — Politeknik Elektronika Negeri Surabaya (PENS)</h3>
+        <p>Software development, UI/UX design, and data analysis.</p>
+      </div>
+      <div class="item">
+        <div class="when">2021 — 2024</div>
+        <h3>SMA Muhammadiyah 10 GKB — Gresik</h3>
+        <p>Video editor for podcasts, dakwah, and graduation teasers; lead photographer for student ID cards.</p>
+      </div>
+      <div class="item">
+        <div class="when">2019 — 2021</div>
+        <h3>SMP Muhammadiyah 12 GKB — Gresik</h3>
+      </div>
+      <div class="item">
+        <div class="when">2012 — 2018</div>
+        <h3>SD Muhammadiyah 1 GKB — Gresik</h3>
       </div>
     </div>
   </section>
@@ -104,26 +163,9 @@ const categories = [
     </div>
     <p class="prose muted" style="margin-bottom: 1.5rem">
       Want to talk about a project, a role, or a collaboration? Drop a message —
-      it lands straight in my inbox.
+      it lands straight in my inbox. Or email me directly at
+      <a href="mailto:syauqy.arrayyan@gmail.com">syauqy.arrayyan@gmail.com</a>.
     </p>
-    <form
-      class="form"
-      action="https://formspree.io/f/your-form-id"
-      method="POST"
-    >
-      <label>
-        name
-        <input type="text" name="name" required autocomplete="name" />
-      </label>
-      <label>
-        email
-        <input type="email" name="email" required autocomplete="email" />
-      </label>
-      <label>
-        message
-        <textarea name="message" required></textarea>
-      </label>
-      <button class="btn solid" type="submit">send</button>
-    </form>
+    <ContactForm />
   </section>
 </Base>

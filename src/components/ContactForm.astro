@@ -1,0 +1,33 @@
+---
+const formId = "myeggkpv";
+const endpoint = `https://formspree.io/f/${formId}`;
+---
+<form id="contact-form" class="form" method="POST" action={endpoint}>
+  <label>
+    name
+    <input type="text" name="name" required autocomplete="name" data-fs-field />
+  </label>
+  <span class="form-msg form-error" data-fs-error="name"></span>
+  <label>
+    email
+    <input type="email" name="email" required autocomplete="email" data-fs-field />
+  </label>
+  <span class="form-msg form-error" data-fs-error="email"></span>
+  <label>
+    message
+    <textarea name="message" required data-fs-field></textarea>
+  </label>
+  <span class="form-msg form-error" data-fs-error="message"></span>
+  <input type="hidden" name="_gotcha" aria-hidden="true" tabindex="-1" />
+  <input type="hidden" name="_subject" value="New portfolio message" />
+  <div class="form-msg form-success" data-fs-success>
+    Message sent — thanks for reaching out. I'll reply at the email you left.
+  </div>
+  <div class="form-msg form-error" data-fs-error></div>
+  <button class="btn solid" type="submit" data-fs-submit-btn>send</button>
+</form>
+
+<script>
+  import { initForm } from "@formspree/ajax";
+  initForm({ formElement: "#contact-form", formId: "myeggkpv" });
+</script>

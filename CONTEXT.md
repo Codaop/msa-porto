@@ -43,3 +43,7 @@ _Avoid_: Loading screen, splash
 **Evidence**:
 The material inside a project page that proves the work happened: images, screenshots, links, and the description.
 _Avoid_: Proof, deliverables
+
+**Skill**:
+A capability grouped into the site's skills section (design, development, tools & IDEs, creative, soft skills). Skills signal what the owner can do today; categories group the evidence of those skills.
+_Avoid_: Ability, competency

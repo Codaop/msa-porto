@@ -1,6 +1,6 @@
 # msa-porto
 
-A personal developer portfolio — one static monolith built with Astro, styled like the Kali Linux desktop, deployed to Vercel.
+The personal portfolio of Muhammad Syauqy Arrayyan — one static Astro monolith, styled like the Kali Linux desktop, deployed to Vercel. UI/UX designer, frontend developer, and creative media.
 
 ## Project structure
 
@@ -45,14 +45,14 @@ under `## ` headings (problem → what I did → results).
 
 ## To-do before going live
 
-1. Replace sample projects in `src/content/projects/` with real work
-2. Replace placeholder SVGs in `public/projects/` with real screenshots
-3. Write the real about paragraph in `src/pages/index.astro`
-4. Replace `https://formspree.io/f/your-form-id` in `src/pages/index.astro` with a real Formspree form ID
-5. Fill real entries on `src/pages/experience.astro` and the education timeline in `src/pages/index.astro`
-6. Deploy: `git init && git add . && git commit`, push to GitHub, import into Vercel (static output, no build overrides needed)
+1. Replace placeholder SVGs in `public/projects/` with real screenshots/portfolio images
+2. Add live/source links to project frontmatter when they exist (currently none)
+3. The contact form is wired to Formspree (`myeggkpv`); test a real submission
+4. Deploy: push to GitHub, import into Vercel (static output, no build overrides needed)
 
 ## Notes
 
 - Boot screen replays once per visitor-local-day (stored in `localStorage`); skippable with ESC.
+- Contact form submits via `@formspree/ajax` in-page (no redirect); field and form errors show inline.
 - No backend, no database, no auth — a monolith by design. See `docs/adr/` and `CONTEXT.md`.
+- Your CV files live in `public/projects/CV_Syauqy_*` — they're served publicly; move them out if you don't want them downloadable.
