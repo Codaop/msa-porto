@@ -5,7 +5,7 @@ role: "Full-stack Developer"
 tech: ["ASP.NET", "ReactJS", "REST API"]
 type: "individual"
 summary: "A full-stack asset borrowing management system, built solo in 7 days — ASP.NET backend with a ReactJS frontend over a RESTful API."
-images: ["/projects/borrowit-1.svg"]
+images: ["/projects/borrowit-1.png"]
 date: "2026"
 ---
 

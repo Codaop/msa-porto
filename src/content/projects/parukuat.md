@@ -5,7 +5,7 @@ role: "Mobile Developer & UI/UX Designer"
 tech: ["Flutter"]
 type: "team"
 summary: "A Flutter-based mobile app from the Mobile Programming Workshop that helps post-TBC patients improve lung capacity — with interactive breathing exercise features and daily progress tracking."
-images: ["/projects/parukuat-1.svg", "/projects/parukuat-2.svg"]
+images: ["/projects/parukuat-1.jpg"]
 date: "2026"
 featured: true
 ---
