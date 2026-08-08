@@ -5,7 +5,7 @@ role: "UI/UX Designer, Frontend & Mobile Engineer"
 tech: ["Flutter", "ReactJS", "ASP.NET", "Figma", "Git"]
 type: "team"
 summary: "A leave management ecosystem with distinct UIs for 4 roles — Web Admin, Web HR, Mobile Employee, and Mobile Manager — delivered on a tight deadline by an 8-person team."
-images: ["/projects/dayoff-1.svg"]
+images: ["/projects/dayoff-1.jpg"]
 date: "2026"
 ---
 
