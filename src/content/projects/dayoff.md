@@ -1,10 +1,10 @@
 ---
-title: "DayOff — Leave Management Ecosystem"
+title: "DayOff: Leave Management Ecosystem"
 category: "software"
 role: "UI/UX Designer, Frontend & Mobile Engineer"
 tech: ["Flutter", "ReactJS", "ASP.NET", "Figma", "Git"]
 type: "team"
-summary: "A leave management ecosystem with distinct UIs for 4 roles — Web Admin, Web HR, Mobile Employee, and Mobile Manager — delivered on a tight deadline by an 8-person team."
+summary: "A leave management ecosystem with distinct interfaces for four roles: Web Admin, Web HR, Mobile Employee, and Mobile Manager. It was delivered on a tight deadline by an 8-person team."
 images: ["/projects/dayoff-1.jpg"]
 date: "2026"
 ---

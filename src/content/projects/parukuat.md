@@ -1,10 +1,10 @@
 ---
-title: "ParuKuat — Mobile Health Application"
+title: "ParuKuat: Mobile Health Application"
 category: "software"
 role: "Mobile Developer & UI/UX Designer"
 tech: ["Flutter"]
 type: "team"
-summary: "A Flutter-based mobile app from the Mobile Programming Workshop that helps post-TBC patients improve lung capacity — with interactive breathing exercise features and daily progress tracking."
+summary: "A Flutter-based mobile app from the Mobile Programming Workshop that helps post-TBC patients improve lung capacity through interactive breathing exercises and daily progress tracking."
 images: ["/projects/parukuat-1.jpg"]
 date: "2026"
 featured: true
@@ -12,7 +12,7 @@ featured: true
 
 ## The problem
 
-Post-TBC patients need to rebuild lung capacity with regular breathing exercises — but without structured guidance, they have little way to practice consistently or see progress.
+Post-TBC patients need regular breathing exercises to rebuild lung capacity. Without structured guidance, however, they have little support for consistent practice or progress tracking.
 
 ## What I did
 
@@ -23,4 +23,4 @@ Post-TBC patients need to rebuild lung capacity with regular breathing exercises
 
 ## Results
 
-A working mobile app where breathing guidance and progress tracking live in one place — designed and built by a 3-person team in the workshop setting.
+A working mobile app that brings breathing guidance and progress tracking into one place. It was designed and built by a 3-person team during the workshop.

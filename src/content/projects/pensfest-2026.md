@@ -1,11 +1,11 @@
 ---
-title: "PENSFEST 2026 — Visual Design"
+title: "PENSFEST 2026: Visual Design"
 category: "design"
 role: "UI/UX Designer & Graphic Designer"
 tech: ["Figma", "Graphic Design"]
 type: "team"
-summary: "Visual materials for a major campus event, as part of the volunteer committee — involved from concept through final asset production."
-images: ["/projects/pensfest-1.svg", "/projects/pensfest-2.svg"]
+summary: "Visual materials for a major campus event, created as part of the volunteer committee. I contributed from concept through final asset production."
+images: ["/projects/pensfest-1.jpg"]
 date: "2026"
 featured: true
 ---
@@ -21,4 +21,4 @@ A major campus event needed a full set of visual materials, produced by a volunt
 
 ## Results
 
-The materials were produced and used across the event — shipped on time, alongside everything else the committee was juggling.
+The materials were produced and used across the event, and shipped on time alongside the committee's other deliverables.

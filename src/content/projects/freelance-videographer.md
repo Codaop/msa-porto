@@ -1,18 +1,18 @@
 ---
-title: "Freelance Video Production — Content Creator"
+title: "Freelance Video Production: Content Creator"
 category: "media"
 role: "Videographer & Editor"
 tech: ["Videography", "Video Editing"]
 type: "individual"
-summary: "A project-based video production hired by a content creator — handled both the shooting and the editing for digital content needs."
-images: ["/projects/freelance-video-1.svg"]
+summary: "A project-based video production engagement for a content creator. I handled both shooting and editing for their digital content needs."
+images: ["/projects/freelance-video-1.jpg"]
 date: "2026"
 featured: true
 ---
 
 ## The problem
 
-A content creator needed a production run for digital content — a defined project, not an ongoing retainer.
+A content creator needed a defined production run for digital content rather than an ongoing retainer.
 
 ## What I did
 
@@ -21,4 +21,4 @@ A content creator needed a production run for digital content — a defined proj
 
 ## Results
 
-The full production was delivered as agreed — shooting and editing both handled, on a fixed project schedule.
+The full production was delivered as agreed, with both shooting and editing completed on a fixed project schedule.

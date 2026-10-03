@@ -8,12 +8,12 @@ const categories = [
     id: "software",
     name: "software",
     blurb:
-      "Programming and computer science work — including the UI/UX design that lives inside each project.",
+      "Programming and computer science work, including the UI/UX design behind each project.",
   },
   {
     id: "design",
     name: "design",
-    blurb: "Graphic design and visual craft — posters, identities, and event materials.",
+    blurb: "Graphic design and visual craft, from posters and identities to event materials.",
   },
   {
     id: "media",
@@ -21,7 +21,7 @@ const categories = [
     blurb:
       "Photography and videography, done as paid freelance work.",
   },
-];
+] as const;
 
 const skills = [
   {
@@ -46,18 +46,17 @@ const skills = [
   },
 ];
 ---
-<Base title="Syauqy — portfolio" current="home">
+<Base title="Syauqy | portfolio" current="home">
   <section class="hero">
     <p class="term">visitor@recruiter:~$ whoami</p>
     <h1>
-      Hi, I'm Syauqy — a <span style="color: var(--green-bright)">UI/UX
+      Hi, I'm Syauqy, a <span style="color: var(--green-bright)">UI/UX
       designer</span> who codes<span class="blink">_</span>
     </h1>
     <p class="lede">
-      I bridge the gap between visual design and working software — comfortable
-      running Figma end-to-end while also shipping with Laravel, React, and
-      Next.js. This portfolio is the evidence: projects with the role, the
-      process, and the results.
+      I connect visual design with working software. I take projects from
+      end-to-end Figma work to implementation with Laravel, React, and Next.js.
+      This portfolio shows my role, process, and results across each project.
     </p>
     <div class="roles">
       <span class="tag soft">$ ui/ux design</span>
@@ -76,10 +75,10 @@ const skills = [
     </div>
     <div class="prose">
       <p>
-        I'm a UI/UX designer who codes. At PENS — Politeknik Elektronika
-        Negeri Surabaya — I've worked across product design, event
-        documentation, and web development, often at the same time. I'm drawn
-        to work where design decisions connect directly to what gets built.
+        I'm a UI/UX designer who codes. At PENS, Politeknik Elektronika Negeri
+        Surabaya, I've worked across product design, event documentation, and
+        web development, often at the same time. I enjoy work where design
+        decisions connect directly to what gets built.
       </p>
       <p class="muted">
         Looking for roles and collaborations where the design and the code are
@@ -112,22 +111,22 @@ const skills = [
     </div>
     <div class="timeline">
       <div class="item">
-        <div class="when">2024 — present</div>
-        <h3>S.Tr. Informatics Engineering — Politeknik Elektronika Negeri Surabaya (PENS)</h3>
+        <div class="when">2024 to present</div>
+        <h3>S.Tr. Informatics Engineering, Politeknik Elektronika Negeri Surabaya (PENS)</h3>
         <p>Software development, UI/UX design, and data analysis.</p>
       </div>
       <div class="item">
-        <div class="when">2021 — 2024</div>
-        <h3>SMA Muhammadiyah 10 GKB — Gresik</h3>
+        <div class="when">2021 to 2024</div>
+        <h3>SMA Muhammadiyah 10 GKB, Gresik</h3>
         <p>Video editor for podcasts, dakwah, and graduation teasers; lead photographer for student ID cards.</p>
       </div>
       <div class="item">
-        <div class="when">2019 — 2021</div>
-        <h3>SMP Muhammadiyah 12 GKB — Gresik</h3>
+        <div class="when">2019 to 2021</div>
+        <h3>SMP Muhammadiyah 12 GKB, Gresik</h3>
       </div>
       <div class="item">
-        <div class="when">2012 — 2018</div>
-        <h3>SD Muhammadiyah 1 GKB — Gresik</h3>
+        <div class="when">2012 to 2018</div>
+        <h3>SD Muhammadiyah 1 GKB, Gresik</h3>
       </div>
     </div>
   </section>
@@ -151,7 +150,7 @@ const skills = [
     <div class="prose">
       <p class="muted">
         Organizations, extracurriculars, and event volunteering live on their
-        own page — they show the human side, not craft skill.
+        own page. They show the human side behind the craft.
       </p>
       <a class="btn" href="/experience">open experience page →</a>
     </div>
@@ -162,8 +161,8 @@ const skills = [
       <span class="hash">#</span><h2>contact</h2><span class="rule"></span>
     </div>
     <p class="prose muted" style="margin-bottom: 1.5rem">
-      Want to talk about a project, a role, or a collaboration? Drop a message —
-      it lands straight in my inbox. Or email me directly at
+      Want to talk about a project, a role, or a collaboration? Send a message
+      and it will land in my inbox. You can also email me directly at
       <a href="mailto:syauqy.arrayyan@gmail.com">syauqy.arrayyan@gmail.com</a>.
     </p>
     <ContactForm />
