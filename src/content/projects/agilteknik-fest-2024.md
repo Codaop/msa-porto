@@ -1,17 +1,17 @@
 ---
-title: "AgileTeknik Fest 2024 — Event Documentation"
+title: "AgileTeknik Fest 2024: Event Documentation"
 category: "media"
 role: "Videographer & Editor"
 tech: ["Videography", "Video Editing"]
 type: "team"
-summary: "Video documentation for the full AgileTeknik Fest 2024 event at PENS — shooting across the entire event, then post-production editing for publication."
-images: ["/projects/agilteknik-1.svg"]
+summary: "Video documentation for the full AgileTeknik Fest 2024 event at PENS, including event-wide shooting and post-production editing for publication."
+images: ["/projects/agilteknik-1.png"]
 date: "2024"
 ---
 
 ## The problem
 
-A campus festival needed the whole event captured — not highlight clips, but documentation of the full day.
+A campus festival needed complete event coverage, not just highlight clips. The goal was to document the full day from start to finish.
 
 ## What I did
 
@@ -20,4 +20,4 @@ A campus festival needed the whole event captured — not highlight clips, but d
 
 ## Results
 
-Complete event documentation delivered and published — the footage the festival now has on record.
+Complete event documentation was delivered and published, giving the festival a full visual record of the event.

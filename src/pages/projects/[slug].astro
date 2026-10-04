@@ -5,7 +5,7 @@ import Base from "../../layouts/Base.astro";
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((p) => ({
-    params: { slug: p.slug },
+    params: { slug: p.id },
     props: { project: p },
   }));
 }
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 const { Content } = await render(project);
 ---
-<Base title={`${project.data.title} — Syauqy`} current="project">
+<Base title={`${project.data.title} | Syauqy`} current="project">
   <article class="detail">
     <a class="back" href="/">← back to portfolio</a>
     <h1>{project.data.title}</h1>
@@ -38,7 +38,7 @@ const { Content } = await render(project);
     )}
     <div class="gallery">
       {project.data.images.map((img, i) => (
-        <img src={img} alt={`${project.data.title} — screenshot ${i + 1}`} loading="lazy" />
+        <img src={img} alt={`${project.data.title}, screenshot ${i + 1}`} loading="lazy" />
       ))}
     </div>
     <div class="prose">

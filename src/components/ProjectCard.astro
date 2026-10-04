@@ -12,7 +12,7 @@ const projects = (await getCollection("projects", (p) => p.data.category === cat
   .slice(0, limit ?? 99);
 ---
 {projects.map((p) => (
-  <a class="card" href={`/projects/${p.slug}/`}>
+  <a class="card" href={`/projects/${p.id}/`}>
     {p.data.images[0] && (
       <div class="thumb">
         <img src={p.data.images[0]} alt={`${p.data.title} screenshot`} loading="lazy" />

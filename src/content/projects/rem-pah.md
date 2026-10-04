@@ -1,18 +1,18 @@
 ---
-title: "REM-PAH — IoT Web Monitoring Platform"
+title: "REMPAH: IoT Web Monitoring Platform"
 category: "software"
 role: "UI/UX Designer & Website Engineer"
 tech: ["MQTT", "IoT", "Figma", "Web"]
 type: "team"
-summary: "Real-time web monitoring platform for essential oil distillation, integrated with IoT hardware via MQTT — built for KMIPN, the national polytechnic informatics student competition."
-images: ["/projects/rem-pah-1.svg", "/projects/rem-pah-2.svg"]
+summary: "A real-time web monitoring platform for essential oil distillation. It connects to IoT hardware through MQTT and was built for KMIPN, the national polytechnic informatics student competition."
+images: ["/projects/rempah(2).svg", "/projects/rempah(1).svg", "/projects/rempah(3).svg", /projects/rempah(4).svg]
 date: "2026"
 featured: true
 ---
 
 ## The problem
 
-Essential oil distillation craftsmen had no live visibility into the distillation process — telemetry existed only on hardware, and production overhead was hard to control.
+Essential oil distillation craftsmen had no live view of the distillation process. Telemetry existed only on the hardware, making production overhead difficult to monitor and control.
 
 ## What I did
 
@@ -22,4 +22,4 @@ Essential oil distillation craftsmen had no live visibility into the distillatio
 
 ## Results
 
-The platform was submitted to KMIPN (national polytechnic informatics student competition), with selection in progress — and the real-time visibility is designed to reduce production overhead for craftsmen.
+The platform was submitted to KMIPN, the national polytechnic informatics student competition, and is currently under selection. Its real-time visibility is designed to help craftsmen reduce production overhead.
